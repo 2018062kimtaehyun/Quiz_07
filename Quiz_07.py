@@ -10,12 +10,8 @@ def generate_lotto_numbers():
             lotto_numbers.append(number)
 
     lotto_numbers.sort()
-    return lotto_numbers
 
-def main():
-    generated_numbers = generate_lotto_numbers()
-    numbers_str = ', '.join(map(str, generated_numbers))
+    numbers_str = ', '.join(map(str, lotto_numbers))
     print(f"생성된 로또 번호는 {numbers_str} 입니다")
 
-if __name__ == "__main__":
-    main()
+generate_lotto_numbers()
