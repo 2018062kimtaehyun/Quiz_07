@@ -1,19 +1,16 @@
 import random
 
 def generate_lotto_numbers():
-    results = []
+    lotto_numbers = []
 
-    for _ in range(6):
+    while len(lotto_numbers) < 6:
         number = random.randint(1, 45)
 
-        # 중복된 숫자가 없도록 확인
-        while number in results:
-            number = random.randint(1, 45)
+        if number not in lotto_numbers:
+            lotto_numbers.append(number)
 
-        results.append(number)
-        print(number)
-
-    return results
+    lotto_numbers.sort()
+    return lotto_numbers
 
 def main():
     generated_numbers = generate_lotto_numbers()
